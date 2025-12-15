@@ -14,6 +14,10 @@ VSCode will interpret files with extension `.ipynb` as a jupyter notebook file.
 
 [Octave Kernel](#octave-kernel)
 
+[Jupyter Notebook to HTML or PDF](#jupyter-notebook-to-html-or-pdf)
+
+[Useful VSCode Marketplace Extensions for Jupyter Notebook](#useful-vscode-marketplace-extensions-for-jupyter-notebook)
+
 ## Python Kernel
 Setting up python kernel on jupyter notebook in vscode.
 
@@ -138,7 +142,49 @@ The following was performed in a linux environment:
 12. Select the Octave kernel you want to use
 13. Now you should be able to run Octave code in jupyter notebook on vscode
 
+## Jupyter Notebook to HTML or PDF
+This section will show how to convert a jupyter notebook file to html file for reading on a web browser. This will use `pretty-jupyter` to create html template with a table of contents.
 
+### On Linux System
+1) Make sure jupyter notebook is installed in the python virtual environment
+    ```bash
+    $ pip install jupyterlab notebook
+    ```
+2) For generating html files
+    1) Install `pretty-jupyter`, this creates a htlm template with a table of contents
+        ```bash
+        $ pip install pretty-jupyter
+        ```
+    2) Convert the jupyter notebook file to html
+        ```bash
+        $ jupyter nbconvert --output-dir './html_dirname' --to html --template pj jupyter_file1.ipynb jupyter_file2.ipynb
+        ```
+        or
+
+        for converting all `.ipynb` files
+        ```bash
+        $ jupyter nbconvert --output-dir './html_dirname' --to html --template pj *.ipynb
+        ```
+3) For generating pdf files
+    1) Install `pandoc`
+        ```bash
+        $ sudo apt-get install pandoc
+        ```
+    2) Install `texlive` if not already installed, `nbconvert` converts the jupyter notebook to a `.tex` file and then uses texlive to convert the `.tex` file to pdf
+        ```bash
+        $ sudo apt-get install texlive-full
+        ```
+    3) Convert the jupyter notebook file to pdf
+        ```bash
+        $ jupyter nbconvert --output-dir './pdf_dirname' --to pdf jupyter_file1.ipynb jupyter_file2.ipynb
+        ```
+        or
+
+        for converting all `.ipynb` files
+        ```bash
+        $ jupyter nbconvert --output-dir './pdf_dirname' --to pdf *.ipynb
+        ```
+4) Make sure you've ran the `.ipynb` files before converting to html or pdf, otherwise the file will not have the output of the cells in the notebook
 
 ## Useful VSCode Marketplace Extensions for Jupyter Notebook
 - Jupyter by Microsoft

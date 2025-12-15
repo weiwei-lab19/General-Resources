@@ -1,7 +1,8 @@
 # Git Reference
 
-## Content
-
+## Contents
+* [Installing Git](#installing-git)
+* [Basic Commands](#basic-commands)
 ## Installing Git
 
 ### On Linux 
