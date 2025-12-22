@@ -237,7 +237,6 @@ gitGraph
 ## Best Practices
 
 - Always pull the latest changes before starting new work
-- Use descriptive branch names: `feature/`, `bugfix/`, `hotfix/`
 - Keep commits atomic and well-documented
 - Review your own changes before requesting review
 - Resolve conflicts locally before pushing
