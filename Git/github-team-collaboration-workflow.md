@@ -21,7 +21,7 @@ cd <repository-name>
 
 ```mermaid
 graph TD
-    A[Routine Main Branch Update] --> B[Create Feature Branch]
+    A[Pull Main Branch Updates] --> B[Create New Working Branch]
     B --> C[Make Changes & Commit]
     C --> D[Push to Remote Branch]
     D --> E[Create/Modify Pull Request]
@@ -29,21 +29,20 @@ graph TD
     F -->|Requested Changes| G[Update Branch with Feedback]
     G --> C
     F -->|Approved| H[Merge to Main]
-    H --> I[Delete Feature Branch]
-    I --> J[Pull Latest Changes]
-    J --> K[Continue Working]
-    K --> A
+    H --> I[Delete Working Branch]
+    I --> A
     F -->|Merge Conflict| L[Resolve Conflicts]
     L --> C
+
 ```
 
-### 1. Routine Main Branch Update
+### 1. Pull Main Branch Updates
 This is done to pull any new updates your team might have made to the main branch of the repo. Good practice to do this before starting to work on a new branch to see new changes
 ```bash
 git checkout main 
 git pull origin main 
 ```
-### 2. Create Feature Branch
+### 2. Create New Working Branch
 Create a separate branch from the main branch where you will make changes independent of the main branch
 
 Branch naming conventions
@@ -66,7 +65,7 @@ git commit -m "Descriptive commit message"
 ```
 
 ### 4. Push to Remote
-Push the feature branch to the remote repository
+Push the new commits in the working branch to the remote repository
 ```bash
 git push origin feature/your-feature-name
 ```
@@ -107,23 +106,19 @@ Example of a pull request description:
 - Team members review your changes
 - Address feedback if requested
 - Update your branch with changes if needed
+- Resolve any merge conflicts with the main branch
 
 **Keep working branch updated as new commits in the main branch come in**\
 Make sure to keep your working branch updated while waiting for the review process. The main branch may have new commits you need to address in your working branch while your branch is under review.
 Two options for addressing new commits in the main branch for the working branch: [Merge or Rebase](#merge-or-rebase)
 
 
-### 7. Merge to Main
+### 7. Merge to Main and Delete Working Branch
 - Once approved, click "Merge Pull Request"
 - Choose merge strategy (Squash, Rebase, or Merge)
-- Delete the feature branch after merging
+- Delete the working branch after merging
 
-### 8. Update Local Repository
-Update the local repo with the changes made from merging the branches
-```bash
-git checkout main
-git pull origin main
-```
+
 ## Merge or Rebase
 
 ### Merging two branches
@@ -138,7 +133,7 @@ git checkout feature/your-feature-name
 # merge the main branch to the working branch
 git merge main
 ```
-When to use:
+When to use `merge`:
 - Before creating a pull request
 - When pull request sits open for a while and main has moved forward
 - Daily or every few days while working on long-running features
@@ -202,7 +197,7 @@ What does `rebase` do:
 3. Fast-forwards the working branch to match the latest main branch
 4. Replays your working branch commits one-by-one on top of the latest main branch
 
-When to use: 
+When to use `rebase`: 
 - You're working on a branch that only you work on
 - You want a cleaner and easier to read commit history
 ```mermaid

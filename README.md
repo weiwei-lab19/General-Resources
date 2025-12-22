@@ -1,11 +1,14 @@
 # General-Resources
 General resources for Wei
-
-## Contents
 **Git**
 - [Git Reference](Git/git-reference.md)
     - Installing Git
     - Basic Commands
+- [GitHub Team Collaboration Workflow](Git/github-team-collaboration-workflow.md)
+    - Initial Setup
+    - Workflow
+    - Merge or Rebase
+    - Best Practices
 
 
 **Linux**
