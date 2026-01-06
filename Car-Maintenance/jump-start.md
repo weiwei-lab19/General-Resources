@@ -14,7 +14,7 @@ Car B - Car with working battery\
 
 2) Turn off both vehicles, make sure that both vehicles are **completely off**
 
-3) On Car A
+3) On Car A 
     1) Take the RED jumper wire and connect one of the leads to the RED (or POSITIVE) end of the battery in Car A. In the meantime, rest the BLACK jumper wire lead for Car A on a piece of plastic on Car A, not touching any bare metal.
         - Make sure the metal piece of jumper cable lead clips onto the metal piece of the car battery completely
 
