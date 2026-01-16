@@ -1,6 +1,14 @@
 # General-Resources
 General resources for Wei
 
+## MathWorks
+- [Installation](MathWorks/installation.md)
+
+### Simulink Test
+- [Useful Tutorials](MathWorks/Simulink%20Test/useful-tutorials.md)
+- [Baseline Testing](MathWorks/Simulink%20Test/baseline-testing.md)
+ 
+
 ## Git
 - [Git Reference](Git/git-reference.md)
     - Installing Git

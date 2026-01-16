@@ -1,7 +1,10 @@
-# GitHub Team Collaboration Workflow
+# Git Team Collaboration Workflow
 
-This guide outlines the steps for collaborating with other developers on your team using GitHub.
+This guide outlines the steps for collaborating with other developers on your team using git.
+
+
 ## Contents
+
 [Initial Setup](#initial-setup)
 
 [Workflow](#workflow)
@@ -9,8 +12,9 @@ This guide outlines the steps for collaborating with other developers on your te
 [Merge or Rebase](#merge-or-rebase)
 
 [Best Practices](#best-practices)
+
 ## Initial Setup
-Clone the remote repository from Github and `cd` into that repo.
+Clone the remote repository from the remote git repository and `cd` into that repo.
 ```bash
 git clone <repository-url>
 cd <repository-name>
@@ -45,11 +49,13 @@ git pull origin main
 ### 2. Create New Working Branch
 Create a separate branch from the main branch where you will make changes independent of the main branch
 
-Branch naming conventions
+Branch naming conventions:
+
 - `feature/description` - New features
 - `bugfix/description` - Bug fixes
 - `hotfix/description` - Urgent fixes
 - `refactor/description` - Code refactoring
+
 ```bash
 git checkout -b feature/your-feature-name
 ```
@@ -71,12 +77,15 @@ git push origin feature/your-feature-name
 ```
 
 ### 5. Create/Modify Pull Request
-On the remote repository in github, create a pull request if one doesn't already exist for the branch you're working on.
-- Go to GitHub repository
-- Click "New Pull Request"
-- Select your feature branch to compare with main
-- Add title and description
-- Click "Create Pull Request"
+On the remote repository, create a pull request if one doesn't already exist for the branch you're working on.
+
+For GitHub: 
+
+1. Go to GitHub repository
+2. Click "New Pull Request"
+3. Select your feature branch to compare with main
+4. Add title and description
+5. Click "Create Pull Request"
 
 You can also modify the branch on an existing pull request if you need to make additional changes to the branch after the pull request has already been created. Additional commits to the branch show up automatically on the existing pull request once you push the change from local to remote. 
 
@@ -114,6 +123,7 @@ Two options for addressing new commits in the main branch for the working branch
 
 
 ### 7. Merge to Main and Delete Working Branch
+
 - Once approved, click "Merge Pull Request"
 - Choose merge strategy (Squash, Rebase, or Merge)
 - Delete the working branch after merging
@@ -134,10 +144,11 @@ git checkout feature/your-feature-name
 git merge main
 ```
 When to use `merge`:
+
 - Before creating a pull request
 - When pull request sits open for a while and main has moved forward
 - Daily or every few days while working on long-running features
-- When GitHub tells you "This branch is out-of-date with the base branch"
+- When you see "This branch is out-of-date with the base branch"
 - You are working on a public/shared branch
 - You want to preserve the true commit timeline
 ```mermaid
@@ -191,13 +202,16 @@ Since the working branch history has changed after rebasing, you will need to fo
 # push working branch commits from local to remote, this will also check that no one else pushed changes to your working branch before overwriting 
 git push --force-with-lease
 ```
+
 What does `rebase` do:
+
 1. Takes commits from the working branch
 2. Temporarily removes them
 3. Fast-forwards the working branch to match the latest main branch
 4. Replays your working branch commits one-by-one on top of the latest main branch
 
 When to use `rebase`: 
+
 - You're working on a branch that only you work on
 - You want a cleaner and easier to read commit history
 ```mermaid

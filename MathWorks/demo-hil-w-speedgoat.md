@@ -1,4 +1,6 @@
 # Demo: Hardware-in-the-Loop (HiL) with Speedgoat
+
+## PLC Controller
 This demo shows how to test a PLC control system in a HiL setup with a Speedgoat target machine. Video for this demo can be found [here](https://www.youtube.com/watch?v=Rb3Aefnu0NY)
 
 ```mermaid
@@ -53,3 +55,23 @@ graph TB
     class PLC,PLCIO plcStyle
     class Model simStyle
 ```
+
+## Motor Controller HiL Testing
+
+[Link to Video](https://www.youtube.com/watch?v=sESpcrn9BzU)
+
+```mermaid
+graph TD
+    DC[Development Computer <br/> DC]
+    ST[Speedgoat Target Machine <br/> ST]
+    MC[Motor Controller <br/> MC]
+
+    DC --> |1| ST
+    ST --> |2| MC
+    MC --> |3| ST
+    ST --> |4| MC
+```
+    1. DC sends speed command to ST 
+    2. ST sends speed command to MC via CAN Bus I/O
+    3. MC calculates PWM and sends it to ST via Digital I/O
+    4. ST simulates motor current and speed, and sends it to MC as feedback via Analog I/O and Digital I/O, respectively.

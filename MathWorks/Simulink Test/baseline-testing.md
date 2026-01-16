@@ -78,3 +78,4 @@ This model simulates the behavior of a wheel with an anti-lock braking system (A
     saveToFile(testFile);
     ```
 
+## Compare Simulation to Baseline Data

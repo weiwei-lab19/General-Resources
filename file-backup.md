@@ -114,7 +114,7 @@ The google drive used for the sole purpose of file storage is under the email:
 
 ## Store Backups into External Drives
 1) Upload `GitHub Repository Backup - MMDDYYYY` and `Google Drive Backup - MMDDYYYY` folders into the Newton Flash Drive.
-2) Upload all the contents in the Newton Flash Drive into a folder in the Galileo Hard Drive named `Newton`
+2) Upload all the contents in the Newton Flash Drive into a folder in the Galileo Hard Drive named `Newton-MMDDYYYY`
 
 
 

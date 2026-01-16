@@ -1,0 +1,117 @@
+Become familiar with 
+- Simulink Test
+- HiL using Simuilnk Realtime
+- Simulink solver 
+- Simulink regression tests, integrate with git and CI workflow
+- 
+Overview
+
+Insight Global is seeking a highly skilled Test & Validation Engineer to join our team. This role focuses on developing and validating advanced control systems using Hardware-in-the-Loop (HIL) platforms. The ideal candidate will have strong expertise in MATLAB/Simulink, embedded controls, and real-time simulation environments.
+
+
+Required Skillsets:
+- Bachelor’s degree in electrical, controls, power, mechatronics, or related field
+- 3–7+ years of experience in embedded or controls test and validation with HIL
+- Strong MATLAB and Simulink skills, including Simulink Test, Simulink Real-Time, and Simscape Electrical
+- Scripting experience with Python and VBA
+- Hands-on experience with Speedgoat using ~1 ms base rates, fixed-step solvers, rate transitions, and task partitioning
+ 
+
+Day-to-Day Responsibilities
+
+- Build and operate HIL rigs: configure Simulink Real-Time on Speedgoat, map I/O harness, manage deterministic scheduling, and optimize solver settings for ~1 ms steps
+- Model plants: create and maintain Simulink and Simscape Electrical models for PCS/inverter, filters, transformer, battery, and BMS; validate model fidelity against bench and site data
+- Perform HIL simulations: connect Schneider M580 PLC to Speedgoat via Modbus TCP; verify commands, telemetry, time sync, alarms/events, and fail-safe sequences end-to-end
+- Author requirement-based tests: derive MiL, SiL, and HIL cases for power/VAR control, ramp-rate, frequency/voltage response, SoC management, thermal derates, ride-through, startup/shutdown, and fault scenarios
+- Automate regression testing: implement scripted test suites with pass/fail metrics, waveform capture, and auto-reports; integrate with Git and CI workflows
+- Manage defect lifecycle: analyze logs, isolate root causes across controller, PLC, and plant model; file issues, verify fixes, and maintain full traceability from requirement to test to result
+- Ensure rig reliability and safety: maintain configurations, calibrations, and harnesses; implement health checks; observe lab safety protocols
+ 
+
+
+
+First Day Questions:
+- Procedure for requesting time off
+- Procedure for requesting additional software 
+- Is it ok to connect my own usb devices and monitors to work computer
+- More detail on access to target machine 
+
+
+Context on the system
+- Using PLC coder for controller code generation?
+- controller code deployment process on PLC
+
+Understanding priorities:
+- Test scenarios that are more critical than others?
+- Maturity of current test automation efforts, what percentage of tests run with automated scripts vs manual execution?
+
+
+consultant performance review 04/06/2026
+3 phishing contracts
+no 
+IG Care center - consultant 
+ - Benefits 
+2 weeks in advance for planned time off
+cyber security training
+
+- zero hour triggers auto rejection
+- cost pos
+
+- IG Family Foundation (grant )
+
+SLID log in ID 
+scott and richard 
+
+Exact dates for travel in the beginning of february - when will mathworks people be there 
+
+What else can i do before my equipment comes in 
+Feb 3rd Wed Feb 4th 
+
+20 - 50 mg
+1 to 3 plc 
+bandwidth 
+
+FRD 
+
+Factory Acceptance Test (FAT)
+
+Site Acceptance Test
+
+Nexus - Bank controller code
+
+base code stored in 
+
+FAT test
+ - build code 
+ - integrator 
+ - virtual plant 
+ - dry cycle align 
+ - capacity test 
+ - variable dispatch 
+ - random cycle 
+ - iso block 
+ - ramp rate 
+ - FAT proces
+ 
+BESS -    
+SPARC -     
+jump server 
+L2 Plus Vlan configuration
+
+NEXUS 
+- DBV
+- DDT
+- DFB
+
+Flow logic
+
+Simulator - 
+
+Zefcraft 
+
+XL 
+
+Independent system operators (ISO) 
+P-V curves
+Q-P curves
+ramp rates
