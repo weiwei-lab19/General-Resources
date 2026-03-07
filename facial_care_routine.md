@@ -15,6 +15,7 @@ Matrix showing which skincare ingredients **should NOT be mixed together** in th
 
 ### Legend
 - x = Do not combine
+- ! = Use with caution
 - ✓ = Compatible - safe to use together
 
 ## Morning Routines
