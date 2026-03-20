@@ -17,11 +17,13 @@ graph TD
     TAB[Samsung Tablet<br/> - read/write -]
     USB1[Newton Flash Drive <br/>PII Storage<br/> - encrypted storage - ]
     USB2[Galileo Hard Drive <br/>PII Storage<br/> - encrypted storage - ]
+    BW[Bitwarden] 
     
     PC <--> GH
     PC <--> GD
     TAB <--> GH
     TAB <--> GD
+    BW --> USB1
     GH --> USB1
     GD --> USB1
     USB1 --> USB2
