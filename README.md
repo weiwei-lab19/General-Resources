@@ -18,6 +18,8 @@ General resources for Wei
     - Workflow
     - Merge or Rebase
     - Best Practices
+- [Git How-to](Git/git-how-to.md)
+    - How to Rebase a Branch Interactively
 
 
 ## Linux
